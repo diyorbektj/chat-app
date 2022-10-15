@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::query()->where('id', "!=", auth()->id())->get();
+        $user = User::query()->where('id', "!=", 1)->get();
         return $this->success($user);
     }
 }
